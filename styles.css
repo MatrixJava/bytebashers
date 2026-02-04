@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
     overflow: hidden;
 }
 
@@ -847,6 +847,7 @@ section {
         padding-top: 8rem;
         border-right: 4px solid var(--primary-color);
         box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        z-index: 999;
     }
     
     .nav-menu.active {
@@ -861,6 +862,7 @@ section {
     .hamburger {
         display: flex;
         z-index: 1001;
+        position: relative;
     }
     
     .hero-title {
@@ -925,7 +927,8 @@ section {
     }
     
     .hero {
-        padding: 8rem 0 3rem;
+        padding: 10rem 0 3rem;
+        min-height: auto;
     }
     
     .hero-title {

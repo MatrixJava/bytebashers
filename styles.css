@@ -746,7 +746,7 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--dark-light);
+    background: #000000;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 4rem 0 2rem;
 }

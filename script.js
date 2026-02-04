@@ -94,49 +94,52 @@ processSteps.forEach((step, index) => {
 // Contact Form Submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Show success message (in a real app, you'd send this to a server)
+
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const statusEl = contactForm.querySelector('.form-status');
         const originalText = submitBtn.textContent;
-        
+        const actionUrl = contactForm.getAttribute('action');
+
+        if (!actionUrl) {
+            if (statusEl) statusEl.textContent = 'Form is not configured. Please try again later.';
+            return;
+        }
+
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
-        // Simulate form submission
-        setTimeout(() => {
-            submitBtn.textContent = '✓ Message Sent!';
-            submitBtn.style.background = 'linear-gradient(135deg, #14b8a6 0%, #10b981 100%)';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Reset button after 3 seconds
+        if (statusEl) statusEl.textContent = '';
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                submitBtn.textContent = '✓ Message Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #14b8a6 0%, #10b981 100%)';
+                if (statusEl) statusEl.textContent = 'Thanks! We will get back to you shortly.';
+                contactForm.reset();
+            } else {
+                submitBtn.textContent = 'Send Message';
+                if (statusEl) statusEl.textContent = 'Something went wrong. Please try again.';
+            }
+        } catch (error) {
+            submitBtn.textContent = 'Send Message';
+            if (statusEl) statusEl.textContent = 'Network error. Please try again.';
+        } finally {
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.background = '';
                 submitBtn.disabled = false;
             }, 3000);
-        }, 1500);
-        
-        // In a real application, you would send the data to your backend:
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data)
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     // Handle success
-        // })
-        // .catch(error => {
-        //     // Handle error
-        // });
+        }
     });
 }
 

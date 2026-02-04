@@ -712,6 +712,12 @@ section {
     gap: 1.5rem;
 }
 
+.form-status {
+    min-height: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {

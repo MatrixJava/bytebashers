@@ -302,7 +302,7 @@
                             <div class="contact-icon">📧</div>
                             <div>
                                 <h4>Email</h4>
-                                <p>hello@bytebashers.com</p>
+                                <p>terrillmoyo@me.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -322,18 +322,19 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/maqdwvnn" method="POST">
+                        <input type="hidden" name="_subject" value="New Client Software Inquiry">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name">
+                            <input type="text" name="company" placeholder="Company Name">
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="service" required>
                                 <option value="">Select a Service</option>
                                 <option value="mobile">Mobile App Development</option>
                                 <option value="web">Web Application Development</option>
@@ -344,8 +345,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="4" required></textarea>
+                            <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
                         </div>
+                        <div class="form-status" aria-live="polite"></div>
                         <button type="submit" class="btn-primary btn-large">Send Message</button>
                     </form>
                 </div>

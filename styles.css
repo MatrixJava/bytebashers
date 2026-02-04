@@ -878,6 +878,14 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .hero-visual {
+        display: none;
+    }
+    
+    .floating-card {
+        display: none;
+    }
+    
     .hero-cta {
         flex-direction: column;
     }
@@ -943,10 +951,6 @@ section {
     .btn-large {
         padding: 0.875rem 1.5rem;
         font-size: 1rem;
-    }
-    
-    .floating-card {
-        padding: 1rem;
     }
     
     .tech-stack {

@@ -3,386 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteBashers - Modern Software Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ByteBashers | Engineering Studio for High-Impact Software</title>
+    <meta name="description" content="ByteBashers builds revenue-driving web platforms, mobile apps, and modernization programs for product and operations teams.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="logo-badge.png" alt="ByteBashers Logo" class="logo-image">
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn-primary">Get Started</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="ambient-layer" aria-hidden="true">
+        <span class="signal signal-a"></span>
+        <span class="signal signal-b"></span>
+        <span class="signal signal-c"></span>
+    </div>
+
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="index.html">
+                <img src="logo-badge.png" alt="ByteBashers logo" class="brand-logo">
+                <span class="brand-wordmark">ByteBashers</span>
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-right">
+                <ul id="primary-menu" class="menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html" class="button button-sm">Start Project</a></li>
+            </ul>
+                <div class="social-cluster" aria-label="ByteBashers social links">
+                    <a href="https://github.com/ByteBashersLabs/" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub</a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Transform Your Business With 
-                        <span class="gradient-text">Modern Software</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        We're a team of expert software engineers delivering cutting-edge web and mobile applications that drive growth and efficiency for your business.
+    <main>
+        <section class="hero section container">
+            <p class="kicker" data-reveal>Engineering Studio // Remote-First</p>
+            <div class="hero-grid">
+                <div class="hero-copy" data-reveal>
+                    <h1>We build high-stakes software products that teams rely on every day.</h1>
+                    <p>
+                        ByteBashers partners with operators, product leaders, and founders to ship resilient web platforms,
+                        mobile apps, and modernization programs without slowing the business down.
                     </p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn-primary btn-large">Start Your Project</a>
-                        <a href="#services" class="btn-secondary btn-large">Explore Services</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Delivered</p>
-                        </div>
-                        <div class="stat">
-                            <h3>98%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                        <div class="stat">
-                            <h3>24/7</h3>
-                            <p>Support Available</p>
-                        </div>
+                        <a href="contact.html" class="button">Start a Project</a>
+                        <a href="work.html" class="button button-ghost">View Work</a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="floating-card card-1">
-                        <div class="card-icon">📱</div>
-                        <p>Mobile Apps</p>
-                    </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">🌐</div>
-                        <p>Web Solutions</p>
-                    </div>
-                    <div class="floating-card card-3">
-                        <div class="card-icon">🚀</div>
-                        <p>Fast Delivery</p>
-                    </div>
-                    <div class="hero-circle"></div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
-                <p class="section-subtitle">Comprehensive software solutions tailored to your business needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android that engage users and drive results.</p>
-                    <ul class="service-features">
-                        <li>React Native & Flutter</li>
-                        <li>iOS & Android Native</li>
-                        <li>App Store Optimization</li>
+                <aside class="hero-panel" data-reveal>
+                    <h2>Built for outcomes</h2>
+                    <ul>
+                        <li><span>Faster release velocity</span><strong>2-4x deployment cadence</strong></li>
+                        <li><span>Operational resilience</span><strong>99.95% uptime targets</strong></li>
+                        <li><span>Product adoption</span><strong>Higher activation and retention</strong></li>
                     </ul>
-                </div>
-
-                <div class="service-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3>Web Application Development</h3>
-                    <p>Scalable, high-performance web applications built with modern frameworks and best practices.</p>
-                    <ul class="service-features">
-                        <li>React, Vue, Angular</li>
-                        <li>Node.js, Python, .NET</li>
-                        <li>Cloud-Native Architecture</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                    </div>
-                    <h3>Software Modernization</h3>
-                    <p>Transform legacy systems into modern, efficient applications that keep your business competitive.</p>
-                    <ul class="service-features">
-                        <li>Legacy System Migration</li>
-                        <li>Cloud Migration</li>
-                        <li>Architecture Redesign</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h3>Custom Software Solutions</h3>
-                    <p>Bespoke software tailored to your unique business processes and requirements.</p>
-                    <ul class="service-features">
-                        <li>Business Process Automation</li>
-                        <li>API Development</li>
-                        <li>System Integration</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3>Maintenance & Support</h3>
-                    <p>Ongoing support and maintenance to keep your applications running smoothly and securely.</p>
-                    <ul class="service-features">
-                        <li>24/7 Technical Support</li>
-                        <li>Performance Monitoring</li>
-                        <li>Security Updates</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                        </svg>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Beautiful, intuitive interfaces that provide exceptional user experiences and drive engagement.</p>
-                    <ul class="service-features">
-                        <li>User Research & Testing</li>
-                        <li>Responsive Design</li>
-                        <li>Design Systems</li>
-                    </ul>
-                </div>
+                </aside>
             </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-heading" data-reveal>
+                <p class="kicker">Explore</p>
+                <h2>Browse ByteBashers by page, not one long scroll.</h2>
+            </div>
+            <div class="page-link-grid">
+                <a class="page-link-card" href="work.html" data-reveal>
+                    <p class="card-label">Featured Builds</p>
+                    <h3>Work</h3>
+                    <p>COR Powerlifting app is now in build and marked coming soon with live progress updates.</p>
+                </a>
+                <a class="page-link-card" href="capabilities.html" data-reveal>
+                    <p class="card-label">Services + Method</p>
+                    <h3>Capabilities</h3>
+                    <p>Service pillars and a tight Discover -> Ship -> Scale execution model.</p>
+                </a>
+                <a class="page-link-card" href="team.html" data-reveal>
+                    <p class="card-label">Developers</p>
+                    <h3>Team</h3>
+                    <p>Meet the engineers behind ByteBashers and view developer profile cards.</p>
+                </a>
+                <a class="page-link-card" href="contact.html" data-reveal>
+                    <p class="card-label">Engagement</p>
+                    <h3>Start Project</h3>
+                    <p>Share your goals, timeline, and constraints to get a scoped response.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-heading" data-reveal>
+                <p class="kicker">Proof</p>
+                <h2>Trusted by teams shipping serious software.</h2>
+            </div>
+            <div class="proof-strip" data-reveal>
+                <div class="proof-item">
+                    <strong>50+</strong>
+                    <p>production releases delivered</p>
+                </div>
+                <div class="proof-item">
+                    <strong>98%</strong>
+                    <p>engagement satisfaction rate</p>
+                </div>
+                <div class="proof-item">
+                    <strong>7</strong>
+                    <p>industry verticals supported</p>
+                </div>
+                <blockquote class="testimonial">
+                    "ByteBashers executed like an extension of our internal team and delivered under aggressive deadlines."
+                    <cite>VP Product, B2B Operations Platform</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-brand">ByteBashers</p>
+                <p>Engineering studio for high-impact software delivery.</p>
+            </div>
+            <ul>
+                <li><a href="work.html">Featured Builds</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Start a Project</a></li>
+            </ul>
         </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our <span class="gradient-text">Process</span></h2>
-                <p class="section-subtitle">A proven methodology that delivers results</p>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Discovery & Planning</h3>
-                        <p>We start by understanding your business goals, challenges, and requirements to create a comprehensive project roadmap.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Design & Prototype</h3>
-                        <p>Our designers create intuitive interfaces and interactive prototypes to visualize your solution before development begins.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Development</h3>
-                        <p>Our engineers build your application using cutting-edge technologies and best practices, with regular updates and demonstrations.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Testing & Quality Assurance</h3>
-                        <p>Rigorous testing ensures your application is bug-free, secure, and performs optimally across all devices and platforms.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <div class="step-content">
-                        <h3>Launch & Support</h3>
-                        <p>We handle deployment and provide ongoing support to ensure your success, with continuous monitoring and improvements.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Why Choose <span class="gradient-text">ByteBashers</span>?</h2>
-                    <p>We're not just developers – we're your technology partners. Our team of experienced software engineers is passionate about creating solutions that transform businesses and drive real results.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div>
-                                <h4>Expert Team</h4>
-                                <p>Seasoned professionals with years of experience in modern technologies</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div>
-                                <h4>Agile Approach</h4>
-                                <p>Flexible, iterative development that adapts to your changing needs</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div>
-                                <h4>Quality First</h4>
-                                <p>Rigorous testing and code reviews ensure top-notch deliverables</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div>
-                                <h4>On-Time Delivery</h4>
-                                <p>We respect your deadlines and deliver projects on schedule</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="tech-stack">
-                        <div class="tech-item">React</div>
-                        <div class="tech-item">Node.js</div>
-                        <div class="tech-item">Python</div>
-                        <div class="tech-item">Flutter</div>
-                        <div class="tech-item">AWS</div>
-                        <div class="tech-item">Azure</div>
-                        <div class="tech-item">Docker</div>
-                        <div class="tech-item">TypeScript</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
-                    <p>Ready to transform your business with cutting-edge software? Get in touch with us today for a free consultation.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Remote-First Team</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/maqdwvnn" method="POST">
-                        <input type="hidden" name="_subject" value="New Client Software Inquiry">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="company" placeholder="Company Name">
-                        </div>
-                        <div class="form-group">
-                            <select name="service" required>
-                                <option value="">Select a Service</option>
-                                <option value="mobile">Mobile App Development</option>
-                                <option value="web">Web Application Development</option>
-                                <option value="modernization">Software Modernization</option>
-                                <option value="custom">Custom Software Solutions</option>
-                                <option value="support">Maintenance & Support</option>
-                                <option value="design">UI/UX Design</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
-                        </div>
-                        <div class="form-status" aria-live="polite"></div>
-                        <button type="submit" class="btn-primary btn-large">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="logo-badge.png" alt="ByteBashers Logo" class="logo-image">
-                    </div>
-                    <p>Transforming businesses through innovative software solutions.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#services">Mobile Apps</a></li>
-                            <li><a href="#services">Web Development</a></li>
-                            <li><a href="#services">Modernization</a></li>
-                            <li><a href="#services">Custom Solutions</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#process">Our Process</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ByteBashers. All rights reserved.</p>
-            </div>
-        </div>
+        <p class="copyright">&copy; 2026 ByteBashers. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

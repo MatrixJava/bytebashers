@@ -50,21 +50,43 @@
             </div>
             <div class="work-grid work-grid-single">
                 <article class="feature-card" data-reveal>
-                    <p class="launch-pill">Coming Soon</p>
-                    <p class="card-label">External Client Project</p>
-                    <h3>COR Powerlifting // COR Training Systems</h3>
-                    <p>
-                        Building a mobile-first training platform for personal trainers and strength coaches to manage clients,
-                        track progress, and deliver structured training programs through a streamlined workflow.
-                    </p>
-                    <p>
-                        Launch status: active development in progress with UI and system mockups currently being converted to
-                        production-ready app flows.
-                    </p>
-                    <div class="chip-row"><span>Expo</span><span>React Native</span><span>Supabase</span></div>
-                    <div class="hero-cta" style="margin-top: 1rem;">
-                        <a href="https://teamcor.ca/" target="_blank" rel="noopener noreferrer" class="button button-ghost">teamcor.ca</a>
+                    <div class="feature-card-meta">
+                        <img src="logo-badge.png" alt="" class="feature-app-icon" loading="lazy">
+                        <h3>COR Powerlifting</h3>
+                        <div class="app-badge-row" aria-label="Project status">
+                            <span class="app-badge app-badge-star">&#9733; Live Build</span>
+                            <span class="app-badge">Mobile App</span>
+                            <span class="app-badge app-badge-accent">Coming Soon</span>
+                        </div>
+                        <p class="card-label">External Client Project</p>
+                        <p>
+                            Building a mobile-first training platform for personal trainers and strength coaches to manage clients,
+                            track progress, and deliver structured training programs through a streamlined workflow.
+                        </p>
+                        <p>
+                            Launch status: active development in progress with UI and system mockups currently being converted to
+                            production-ready app flows.
+                        </p>
+                        <div class="chip-row"><span>Expo</span><span>React Native</span><span>Supabase</span></div>
+                        <div class="hero-cta" style="margin-top: 0.75rem;">
+                            <a href="https://teamcor.ca/" target="_blank" rel="noopener noreferrer" class="button button-ghost">teamcor.ca</a>
+                        </div>
                     </div>
+                    <a
+                        class="feature-card-preview"
+                        href="https://teamcor.ca/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open COR Training Systems website"
+                    >
+                        <img
+                            src="https://images.squarespace-cdn.com/content/v1/6765f6f68ceaf35fbad8bb35/a66f53b7-2fdb-4e5e-996f-4f8be4cf42fb/111A1943.jpg"
+                            alt="COR athlete training session visual preview"
+                            loading="lazy"
+                        >
+                        <span class="feature-card-preview-text">COR Preview</span>
+                        <span class="feature-card-preview-cta">Visit</span>
+                    </a>
                 </article>
             </div>
         </section>
@@ -121,7 +143,7 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div><p class="footer-brand">ByteBashers</p><p>Engineering studio for high-impact software delivery.</p></div>
-            <ul><li><a href="work.html">Featured Builds</a></li><li><a href="capabilities.html">Capabilities</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Start a Project</a></li></ul>
+            <ul><li><button class="footer-toggle-line" type="button" data-toggle-line data-line-a="Build boldly. Ship responsibly." data-line-b="noise > value? hard pass." aria-label="Toggle footer one-liner text"><span class="toggle-line-text">Build boldly. Ship responsibly.</span></button></li><li><a href="work.html">Featured Builds</a></li><li><a href="capabilities.html">Capabilities</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Start a Project</a></li></ul>
         </div>
         <p class="copyright">&copy; 2026 ByteBashers. All rights reserved.</p>
     </footer>

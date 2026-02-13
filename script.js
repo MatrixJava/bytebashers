@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
     const sectionNodes = document.querySelectorAll("main section[id]");
     const form = document.querySelector(".contact-form");
+    const toggleLineButtons = document.querySelectorAll("[data-toggle-line]");
 
     const closeMenu = () => {
         if (!menu || !menuToggle) return;
@@ -142,4 +143,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    toggleLineButtons.forEach((button) => {
+        const lineA = (button.getAttribute("data-line-a") || "").trim();
+        const lineB = (button.getAttribute("data-line-b") || "").trim();
+        if (!lineA || !lineB) return;
+
+        const textNode = button.querySelector(".toggle-line-text");
+        let showPrimary = true;
+
+        if (textNode) {
+            textNode.textContent = lineA;
+        } else {
+            button.textContent = lineA;
+        }
+
+        button.addEventListener("click", () => {
+            showPrimary = !showPrimary;
+            const nextLine = showPrimary ? lineA : lineB;
+
+            if (textNode) {
+                textNode.textContent = nextLine;
+            } else {
+                button.textContent = nextLine;
+            }
+
+            button.classList.toggle("is-alt", !showPrimary);
+        });
+    });
 });

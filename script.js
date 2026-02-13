@@ -144,6 +144,63 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const hlsVideos = document.querySelectorAll("video[data-hls-src]");
+    const hlsInstances = [];
+
+    const renderVideoFallback = (video) => {
+        const fallbackSrc = video.getAttribute("data-fallback-src");
+        if (!fallbackSrc) return;
+
+        const fallback = document.createElement("img");
+        fallback.className = video.className.replace("cor-media-video", "").trim();
+        fallback.src = fallbackSrc;
+        fallback.alt = "COR dashboard preview";
+        fallback.loading = "lazy";
+        video.replaceWith(fallback);
+    };
+
+    const tryAutoPlay = (video) => {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+        }
+    };
+
+    hlsVideos.forEach((video) => {
+        const source = video.getAttribute("data-hls-src");
+        if (!source) return;
+
+        if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = source;
+            video.addEventListener("loadedmetadata", () => tryAutoPlay(video), { once: true });
+            return;
+        }
+
+        if (window.Hls && window.Hls.isSupported()) {
+            const hls = new window.Hls({
+                enableWorker: true,
+                lowLatencyMode: true
+            });
+
+            hls.loadSource(source);
+            hls.attachMedia(video);
+            hls.on(window.Hls.Events.MANIFEST_PARSED, () => tryAutoPlay(video));
+            hls.on(window.Hls.Events.ERROR, (_event, data) => {
+                if (!data.fatal) return;
+                hls.destroy();
+                renderVideoFallback(video);
+            });
+            hlsInstances.push(hls);
+            return;
+        }
+
+        renderVideoFallback(video);
+    });
+
+    window.addEventListener("beforeunload", () => {
+        hlsInstances.forEach((instance) => instance.destroy());
+    });
+
     toggleLineButtons.forEach((button) => {
         const lineA = (button.getAttribute("data-line-a") || "").trim();
         const lineB = (button.getAttribute("data-line-b") || "").trim();

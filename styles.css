@@ -795,6 +795,10 @@ a {
     filter: saturate(0.82) contrast(1.04) brightness(0.95);
 }
 
+.cor-media-video {
+    display: block;
+}
+
 .cor-media-item:hover .cor-media-image {
     filter: saturate(0.92) contrast(1.08) brightness(1);
 }

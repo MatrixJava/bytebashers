@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260213m">
+    <link rel="stylesheet" href="styles.css?v=20260213n">
 </head>
 <body>
     <div class="page-noise" aria-hidden="true"></div>
@@ -98,12 +98,18 @@
             </div>
             <div class="cor-media-grid">
                 <figure class="cor-media-item" data-reveal>
-                    <img
-                        class="cor-media-image"
-                        src="cor-coaching-environment.jpg"
-                        alt="COR coaching environment setup with event booth"
-                        loading="lazy"
-                    >
+                    <video
+                        class="cor-media-image cor-media-video"
+                        data-hls-src="https://video.squarespace-cdn.com/content/v1/61c2423310fbf313f8ff7134/66018c8a-5cb3-44e5-9c52-74e435bb2dbc/playlist.m3u8"
+                        data-fallback-src="cor-coaching-environment.jpg"
+                        poster="cor-coaching-environment.jpg"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="COR training facility hero video preview"
+                    ></video>
                     <figcaption class="cor-media-overlay">Coaching Environment</figcaption>
                 </figure>
                 <article class="cor-media-item is-ui-preview" data-reveal>
@@ -119,7 +125,7 @@
                         <img
                             class="cor-media-image"
                             src="cor-dashboard-mockup.png"
-                            alt="COR powerlifting dashboard mockup preview"
+                            alt="COR powerlifting dashboard UI preview showing readiness metrics and weekly stats"
                             loading="lazy"
                         >
                     </div>
@@ -157,6 +163,7 @@
         <p class="copyright">&copy; 2026 ByteBashers. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.18/dist/hls.min.js"></script>
+    <script src="script.js?v=20260213a"></script>
 </body>
 </html>

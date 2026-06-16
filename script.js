@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".site-header");
     const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
+    const menu = document.querySelector(".nav-right");
     const navLinks = document.querySelectorAll(".menu a");
     const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
     const sectionNodes = document.querySelectorAll("main section[id]");

@@ -7,153 +7,223 @@
     <meta name="description" content="ByteBashers builds revenue-driving web platforms, mobile apps, and modernization programs for product and operations teams.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260213n">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260616">
 </head>
 <body>
-    <div class="page-noise" aria-hidden="true"></div>
-    <div class="ambient-layer" aria-hidden="true">
-        <span class="signal signal-a"></span>
-        <span class="signal signal-b"></span>
-        <span class="signal signal-c"></span>
-    </div>
 
     <header class="site-header">
-        <nav class="navbar container" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation">
             <a class="brand" href="index.html">
                 <img src="logo-badge.png" alt="ByteBashers logo" class="brand-logo">
                 <span class="brand-wordmark">ByteBashers</span>
             </a>
             <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <div class="nav-right">
                 <ul id="primary-menu" class="menu">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="capabilities.html">Capabilities</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html" class="button button-sm">Start Project</a></li>
-            </ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html" class="button button-sm">Start Project</a></li>
+                </ul>
                 <div class="social-cluster" aria-label="ByteBashers social links">
-                    <a href="https://github.com/ByteBashersLabs/" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub</a>
+                    <a href="https://github.com/ByteBashersLabs/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="ByteBashers GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero section container">
-            <p class="kicker" data-reveal>Engineering Studio // Remote-First</p>
-            <div class="hero-grid">
-                <div class="hero-copy" data-reveal>
-                    <h1>We build high-stakes software products that teams rely on every day.</h1>
-                    <p>
-                        ByteBashers partners with operators, product leaders, and founders to ship resilient web platforms,
-                        mobile apps, and modernization programs without slowing the business down.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="contact.html" class="button">Start a Project</a>
-                        <a href="work.html" class="button button-ghost">View Work</a>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="status-line" data-reveal>
+                    <span class="status-dot"></span>
+                    <span class="status-text">Systems_Online // v3.0.4</span>
+                </div>
+                <div class="hero-grid">
+                    <div class="hero-copy" data-reveal>
+                        <h1>We build high-stakes software products teams rely on every day.</h1>
+                        <p>ByteBashers partners with operators, product leaders, and founders to ship resilient web platforms, mobile apps, and modernization programs — without slowing the business down.</p>
+                        <p class="jp-tagline">少ないストレス　優れたシステム</p>
+                        <div class="hero-cta">
+                            <a href="contact.html" class="button button-primary">Initialize_Project</a>
+                            <a href="capabilities.html" class="button button-secondary">View_Capabilities</a>
+                        </div>
+                    </div>
+                    <aside class="hero-aside" data-reveal aria-label="Key metrics">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Production Deployments</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">98%</span>
+                            <span class="hero-stat-label">Uptime Commitment</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">7</span>
+                            <span class="hero-stat-label">Studio Experts</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">&#8734;</span>
+                            <span class="hero-stat-label">Iterative Flow</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS STRIP -->
+        <section class="section bg-surface-low">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <span class="kicker">By The Numbers</span>
+                    <h2>Built for outcomes</h2>
+                </div>
+                <div class="stats-strip">
+                    <div class="stat-block" data-reveal>
+                        <span class="number">2&ndash;4x</span>
+                        <span class="label">Deployment cadence</span>
+                    </div>
+                    <div class="stat-block" data-reveal>
+                        <span class="number">99.95%</span>
+                        <span class="label">Uptime targets</span>
+                    </div>
+                    <div class="stat-block" data-reveal>
+                        <span class="number">50+</span>
+                        <span class="label">Production releases</span>
+                    </div>
+                    <div class="stat-block" data-reveal>
+                        <span class="number">7</span>
+                        <span class="label">Industry verticals</span>
                     </div>
                 </div>
-                <aside class="hero-panel" data-reveal>
-                    <h2>Built for outcomes</h2>
-                    <ul>
-                        <li><span>Faster release velocity</span><strong>2-4x deployment cadence</strong></li>
-                        <li><span>Operational resilience</span><strong>99.95% uptime targets</strong></li>
-                        <li><span>Product adoption</span><strong>Higher activation and retention</strong></li>
-                    </ul>
-                </aside>
             </div>
         </section>
 
-        <section class="section container">
-            <div class="section-heading" data-reveal>
-                <p class="kicker">Explore</p>
-                <h2>Browse ByteBashers by page, not one long scroll.</h2>
-            </div>
-            <div class="page-link-grid">
-                <a class="page-link-card" href="work.html" data-reveal>
-                    <p class="card-label">Featured Builds</p>
-                    <h3>Work</h3>
-                    <p>COR Powerlifting app is now in build and marked coming soon with live progress updates.</p>
-                </a>
-                <a class="page-link-card" href="capabilities.html" data-reveal>
-                    <p class="card-label">Services + Method</p>
-                    <h3>Capabilities</h3>
-                    <p>Service pillars and a tight Discover -> Ship -> Scale execution model.</p>
-                </a>
-                <a class="page-link-card" href="team.html" data-reveal>
-                    <p class="card-label">Developers</p>
-                    <h3>Team</h3>
-                    <p>Meet the engineers behind ByteBashers and view developer profile cards.</p>
-                </a>
-                <a class="page-link-card" href="contact.html" data-reveal>
-                    <p class="card-label">Engagement</p>
-                    <h3>Start Project</h3>
-                    <p>Share your goals, timeline, and constraints to get a scoped response.</p>
-                </a>
+        <!-- CAPABILITIES -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <span class="kicker">Core_Capabilities</span>
+                    <h2>Service pillars built for fast-moving teams</h2>
+                </div>
+                <div class="capability-grid">
+                    <article class="capability-card" data-reveal>
+                        <h3>Web_Platforms</h3>
+                        <p>Product portals, internal tooling, and customer-facing systems designed for scale and maintainability.</p>
+                        <p class="meta">Deliverables: architecture, implementation, observability // Typical timeline: 8–16 weeks</p>
+                    </article>
+                    <article class="capability-card" data-reveal>
+                        <h3>Mobile_Apps</h3>
+                        <p>Native-feeling iOS/Android builds with strong offline patterns and production-grade release workflows.</p>
+                        <p class="meta">Deliverables: app UX, APIs, release pipelines // Typical timeline: 10–18 weeks</p>
+                    </article>
+                    <article class="capability-card" data-reveal>
+                        <h3>System_Modernization</h3>
+                        <p>Incremental migration of legacy systems into stable, modular architectures without business disruption.</p>
+                        <p class="meta">Deliverables: migration roadmap, phased rollout // Typical timeline: 6–20 weeks</p>
+                    </article>
+                    <article class="capability-card" data-reveal>
+                        <h3>Product_Engineering</h3>
+                        <p>Embedded engineering support for new initiatives, feature velocity, and platform hardening.</p>
+                        <p class="meta">Deliverables: sprint execution, code quality, delivery leadership // Typical cadence: ongoing</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="section container">
-            <div class="section-heading" data-reveal>
-                <p class="kicker">Proof</p>
-                <h2>Trusted by teams shipping serious software.</h2>
+        <!-- PROCESS -->
+        <section class="section bg-surface-low">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <span class="kicker">Execution_Model</span>
+                    <h2>Discover. Ship. Scale.</h2>
+                </div>
+                <ol class="process-grid">
+                    <li class="process-card" data-reveal>
+                        <span class="process-number">01</span>
+                        <h3>Discover</h3>
+                        <p>Map business constraints, user flows, and technical risks into a sharp execution blueprint.</p>
+                    </li>
+                    <li class="process-card" data-reveal>
+                        <span class="process-number">02</span>
+                        <h3>Ship</h3>
+                        <p>Build in rapid iterations with transparent milestones, continuous QA, and production readiness.</p>
+                    </li>
+                    <li class="process-card" data-reveal>
+                        <span class="process-number">03</span>
+                        <h3>Scale</h3>
+                        <p>Harden performance, improve reliability, and enable internal teams to move faster with confidence.</p>
+                    </li>
+                </ol>
             </div>
-            <div class="proof-strip" data-reveal>
-                <div class="proof-item">
-                    <strong>50+</strong>
-                    <p>production releases delivered</p>
+        </section>
+
+        <!-- VALIDATION -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <span class="kicker">Validation</span>
+                    <h2>Trusted by teams shipping serious software</h2>
                 </div>
-                <div class="proof-item">
-                    <strong>98%</strong>
-                    <p>engagement satisfaction rate</p>
+                <div class="proof-strip" data-reveal>
+                    <div class="proof-item">
+                        <strong>50+</strong>
+                        <p>Production releases delivered</p>
+                    </div>
+                    <div class="proof-item">
+                        <strong>98%</strong>
+                        <p>Engagement satisfaction rate</p>
+                    </div>
+                    <div class="proof-item">
+                        <strong>7</strong>
+                        <p>Industry verticals supported</p>
+                    </div>
+                    <blockquote class="testimonial">
+                        "ByteBashers executed like an extension of our internal team and delivered under aggressive deadlines."
+                        <cite>— VP Product, B2B Operations Platform</cite>
+                    </blockquote>
                 </div>
-                <div class="proof-item">
-                    <strong>7</strong>
-                    <p>industry verticals supported</p>
+                <div class="hero-cta" style="margin-top: 3rem;" data-reveal>
+                    <a href="contact.html" class="button button-primary">Initialize_Project</a>
                 </div>
-                <blockquote class="testimonial">
-                    "ByteBashers executed like an extension of our internal team and delivered under aggressive deadlines."
-                    <cite>VP Product, B2B Operations Platform</cite>
-                </blockquote>
             </div>
         </section>
 
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-grid">
+        <div class="footer-grid container">
             <div>
                 <p class="footer-brand">ByteBashers</p>
                 <p>Engineering studio for high-impact software delivery.</p>
             </div>
             <ul>
                 <li>
-                    <button
-                        class="footer-toggle-line"
-                        type="button"
-                        data-toggle-line
+                    <button class="footer-toggle-line" type="button" data-toggle-line
                         data-line-a="Build boldly. Ship responsibly."
                         data-line-b="noise > value? hard pass."
-                        aria-label="Toggle footer one-liner text"
-                    >
+                        aria-label="Toggle footer tagline">
                         <span class="toggle-line-text">Build boldly. Ship responsibly.</span>
                     </button>
                 </li>
-                <li><a href="work.html">Featured Builds</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Start a Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <p class="copyright">&copy; 2026 ByteBashers. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 ByteBashers. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js?v=20260213a"></script>
+    <script src="script.js?v=20260616"></script>
 </body>
 </html>
